@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="text-xl font-bold text-green-700">Tushar.dev</div>
 
         {/* Social Icons */}
-        <div className="flex space-x-6 text-2xl">
+        <div className="flex space-x-6 text-2xl text-white">
           <a
             href="https://github.com/tushar-hossain"
             target="_blank"
