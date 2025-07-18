@@ -49,10 +49,13 @@ const HeroSection = () => {
           </div>
 
           {/* Resume button */}
-          {/* href="/resume.pdf"
-              download="" */}
-          <div disabled={true}>
-            <a className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-sm transition hover:shadow-sm shadow-white cursor-pointer">
+
+          <div>
+            <a
+              href="/Md_Tushar_Hossain_Resume.pdf"
+              download="Md_Tushar_Hossain_Resume.pdf"
+              className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-sm transition hover:shadow-sm shadow-white cursor-pointer"
+            >
               Download Resume
             </a>
           </div>

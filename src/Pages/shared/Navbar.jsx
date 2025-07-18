@@ -47,7 +47,7 @@ const Navbar = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
+    link.href = "/Md_Tushar_Hossain_Resume.pdf";
     link.download = "Md_Tushar_Hossain_Resume.pdf";
     link.click();
   };

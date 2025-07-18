@@ -28,7 +28,7 @@ const projects = [
       "Managing enrollments was complex — enrolling users, unenrolling on repeated clicks, and managing course seat limits.",
     improvements:
       "Add analytics dashboard for admins and more interactive course content.",
-    liveLink: "https://gardening-community-5a4c1.web.app/",
+    liveLink: "https://bd-programminf.web.app/",
     githubClient: "https://github.com/tushar-hossain/Course_Management_System",
   },
   {
