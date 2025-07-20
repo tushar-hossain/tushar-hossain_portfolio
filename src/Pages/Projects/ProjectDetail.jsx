@@ -4,6 +4,28 @@ import ReactiveButton from "reactive-button";
 
 const projects = [
   {
+    id: "forum-web-application",
+    name: "Forum Web Application",
+    image: "https://i.ibb.co/v63f9MGK/thread-Nest.png",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "DaisyUI",
+    ],
+    description:
+      "A full-featured community platform where users can create posts, comment, vote, and engage in discussions. Includes an admin dashboard for managing users, posts, and comments.",
+    challenges:
+      "Implementing role-based admin controls and optimizing data-heavy components with pagination and dynamic queries.",
+    improvements:
+      "Future improvements include push notifications for replies, advanced search with filtering, and mobile responsiveness enhancements.",
+    liveLink: "https://thread-nest-2b0d5.web.app/",
+    githubClient: "https://github.com/tushar-hossain/thread-next-client-side",
+    githubServer: "https://github.com/tushar-hossain/thread-next-server-side",
+  },
+  {
     id: "gardeners-community",
     name: "Gardeners Community",
     image: "https://i.ibb.co/rKThzQdr/gradening.png",
@@ -30,20 +52,6 @@ const projects = [
       "Add analytics dashboard for admins and more interactive course content.",
     liveLink: "https://bd-programminf.web.app/",
     githubClient: "https://github.com/tushar-hossain/Course_Management_System",
-  },
-  {
-    id: "bill-management-system",
-    name: "Bill Management System",
-    image: "https://i.ibb.co/0xyJTzD/bill-management.png",
-    techStack: ["React", "Node.js", "MongoDB"],
-    description:
-      "A web app to efficiently track and manage monthly bills such as electricity, gas, internet, and more. Simplifies payment and organization.",
-    challenges:
-      "Preventing users from paying the same bill twice was tricky. I solved it using backend validation logic.",
-    improvements:
-      "Future plans include automated reminders and mobile app integration.",
-    liveLink: "https://bills-management-54f20.web.app/",
-    githubClient: "https://github.com/tushar-hossain/bill_management_app",
   },
 ];
 
