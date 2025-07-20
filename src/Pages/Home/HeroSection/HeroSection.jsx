@@ -39,7 +39,7 @@ const HeroSection = () => {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/tushar-hossain-undefined-0361b4371/"
+              href="https://www.linkedin.com/in/tushar-hossain-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-base-300 hover:text-green-700 transition p-2 rounded-full border hover:shadow-sm shadow-white"
