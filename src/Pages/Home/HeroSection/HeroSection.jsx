@@ -52,8 +52,8 @@ const HeroSection = () => {
 
           <div>
             <a
-              href="/Md_Tushar_Hossain_Resume.pdf"
-              download="Md_Tushar_Hossain_Resume.pdf"
+              href="/Resume_of_Md_Tushar_Hossain.pdf"
+              download="Resume_of_Md_Tushar_Hossain.pdf"
               className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-sm transition hover:shadow-sm shadow-white cursor-pointer"
             >
               Download Resume
