@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
 import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 const ContactInfo = () => {
+  const form = useRef();
   const handelEmailForm = (e) => {
     e.preventDefault();
-
     try {
-      Swal.fire({
-        icon: "success",
-        title: "Message Sent!",
-        text: "Your email has been successfully sent.",
-        confirmButtonColor: "#10b981",
-      });
-
-      e.target.reset();
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_service_key,
+          import.meta.env.VITE_TEMPLATE_ID,
+          form.current,
+          {
+            publicKey: import.meta.env.VITE_PUBLIC_KEY,
+          }
+        )
+        .then(
+          () => {
+            Swal.fire({
+              icon: "success",
+              title: "Message Sent!",
+              text: "Your email has been successfully sent.",
+              confirmButtonColor: "#10b981",
+            });
+            e.target.reset();
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
     } catch (error) {
       Swal.fire({
         icon: "error",
@@ -72,7 +88,7 @@ const ContactInfo = () => {
           </div>
           {/* form */}
           <div className="p-8 mt-5 md:mt-0 bg-[#ffffff0c] rounded-lg shadow-2xl shadow-blue-500/20">
-            <form onSubmit={handelEmailForm} className=" space-y-2">
+            <form ref={form} onSubmit={handelEmailForm} className=" space-y-2">
               <div>
                 <label htmlFor="name" className="text-white">
                   Your Name
@@ -104,6 +120,7 @@ const ContactInfo = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
                   className="textarea resize-none w-full bg-[#ffffff0c]  text-white"
                   placeholder="Write your message here..."
                 ></textarea>

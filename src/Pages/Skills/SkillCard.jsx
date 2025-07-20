@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 
 const SkillCard = ({ title, icon, skills }) => {
   return (
@@ -11,7 +12,17 @@ const SkillCard = ({ title, icon, skills }) => {
         <div key={skill.name} className="mb-4">
           <div className="flex justify-between text-sm font-medium mb-1">
             <span className="text-gray-700">{skill.name}</span>
-            <span className="text-gray-500">{skill.level}%</span>
+            <span className="text-gray-500 font-bold">
+              <CountUp
+                start={0}
+                end={skill.level}
+                duration={3}
+                enableScrollSpy={true}
+                scrollSpyOnce={false}
+                scrollSpyDelay={100}
+              ></CountUp>
+              %
+            </span>
           </div>
           <progress
             className="progress progress-success w-full"
