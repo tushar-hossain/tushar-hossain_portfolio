@@ -39,11 +39,6 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center text-sm text-gray-500">
           <p>© 2025 Md. Tushar Hossain All rights reserved.</p>
-          <p>
-            Designed & built using <span className="font-semibold">React</span>{" "}
-            & <span className="font-semibold">Tailwind CSS</span> &{" "}
-            <span className="font-semibold">DaisyUI</span>
-          </p>
         </div>
       </div>
     </footer>

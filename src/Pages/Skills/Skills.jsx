@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLaptopCode, FaServer, FaTools } from "react-icons/fa";
 import SkillCard from "./SkillCard";
 
@@ -10,7 +9,8 @@ const Skills = () => {
       { name: "HTML5", level: 95 },
       { name: "CSS3", level: 90 },
       { name: "Tailwind CSS", level: 92 },
-      { name: "ReactJS", level: 88 },
+      { name: "React.JS", level: 88 },
+      { name: "Next.JS", level: 80 },
     ],
   };
 
@@ -18,8 +18,8 @@ const Skills = () => {
     title: "Backend",
     icon: <FaServer />,
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Express", level: 85 },
+      { name: "Node.Js", level: 90 },
+      { name: "Express.Js", level: 85 },
       { name: "MongoDB", level: 87 },
     ],
   };
@@ -32,6 +32,7 @@ const Skills = () => {
       { name: "GitHub", level: 90 },
       { name: "Firebase", level: 80 },
       { name: "Postman", level: 85 },
+      { name: "Figma", level: 90 },
     ],
   };
 

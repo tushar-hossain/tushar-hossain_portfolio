@@ -19,12 +19,12 @@ const AboutMe = () => {
           <p className="text-gray-100 text-lg leading-relaxed text-justify">
             Hello! I'm <span className="font-semibold">Md. Tushar Hossain</span>
             , a passionate and dedicated{" "}
-            <span className="font-semibold">Full Stack Web Developer</span> with
+            <span className="font-semibold">MERN Stack Web Developer</span> with
             a passion for creating efficient and scalable web applications. My
             programming journey began at university, where I quickly developed a
             strong interest in software development. Since then, I've enjoyed
-            building full-stack projects using tools like React, Tailwind CSS,
-            Node.js, and Express.
+            building mern-stack projects using tools like React.js, Next.js
+            Tailwind CSS, Node.js, and Express.js and Mongodb.
           </p>
           <p className="text-gray-100 text-lg leading-relaxed text-justify">
             I focus on writing clean, maintainable code that aligns with

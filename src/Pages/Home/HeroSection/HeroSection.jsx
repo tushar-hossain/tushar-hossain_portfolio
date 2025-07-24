@@ -17,13 +17,13 @@ const HeroSection = () => {
             deleteSpeed={25}
             loop={0}
             typeSpeed={75}
-            words={["Hi, I’m", "Md. Tushar Hossain", "Full Stack Developer"]}
+            words={["Hi, I’m", "Md. Tushar Hossain", "MERN Stack Developer"]}
           />
         </h1>
         <p className="text-gray-100 max-w-md">
           I specialize in creating modern, responsive web applications using
-          React, Tailwind CSS, Node.js, and MongoDB. Passionate about clean code
-          and seamless user experience.
+          React.js, Next.js, Tailwind CSS, Node.js, Express.js and MongoDB.
+          Passionate about clean code and seamless user experience.
         </p>
 
         <div className="pt-4">

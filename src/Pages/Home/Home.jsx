@@ -1,4 +1,3 @@
-import React from "react";
 import HeroSection from "./HeroSection/HeroSection";
 import AboutMe from "../AboutMe/AboutMe";
 import Skills from "../Skills/Skills";
@@ -14,38 +13,41 @@ const Home = () => {
         <HeroSection />
       </section>
 
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-1" />
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[1px]" />
 
       {/* about me section */}
       <section>
         <AboutMe />
       </section>
 
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-1" />
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[1px]" />
 
       {/* skills section */}
       <section>
         <Skills />
       </section>
 
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-1" />
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[1px]" />
 
       {/* education section */}
       <section>
         <Education />
       </section>
 
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-1" />
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[1px]" />
 
       {/* project section */}
       <section>
         <Projects />
       </section>
 
-      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-1" />
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[1px]" />
 
       {/* contact info */}
-      <ContactInfo />
+      <section>
+        <ContactInfo />
+      </section>
+      <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[1px]" />
     </div>
   );
 };

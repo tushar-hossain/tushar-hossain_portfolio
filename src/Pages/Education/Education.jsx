@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
 
 const Education = () => {
@@ -6,13 +5,13 @@ const Education = () => {
     {
       degree: "Bachelor of Science in Computer Science & Engineering",
       institute: "Sonargaon University",
-      location: "Green Road, Dhaka",
+      location: "147/I, Green Road, Panthapath, Tejgaon, Dhaka",
       year: "— Completed",
     },
     {
       degree: "Diploma in Engineering (Computer Technology)",
       institute: "Cox's Bazar Polytechnic Institute",
-      location: "Cox's Bazar",
+      location: "Link Road, Zhilanja, Cox’s Bazar",
       year: "— Completed",
     },
   ];
@@ -25,7 +24,7 @@ const Education = () => {
         </h2>
 
         <div
-          data-aos="zoom-in"
+          data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
           className="space-y-6"
