@@ -72,14 +72,15 @@ const ProjectDetail = () => {
 
   return (
     <section className="w-11/12 mx-auto py-12 my-18">
-      <h1 className="text-4xl font-bold text-green-700 mb-6">{project.name}</h1>
       <img
         src={project.image}
         alt={project.name}
         className="rounded-lg mb-6 w-full h-auto object-cover"
       />
 
-      <h3 className="text-2xl font-semibold mb-2 text-white">
+      <h1 className="text-4xl font-bold text-green-700 mb-6">{project.name}</h1>
+
+      <h3 className="text-2xl font-semibold mb-4 text-white">
         Technology Stack
       </h3>
       <div className="list-disc list-inside mb-6 flex gap-3 text-white">

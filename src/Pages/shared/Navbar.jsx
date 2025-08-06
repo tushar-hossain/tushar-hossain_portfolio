@@ -60,7 +60,7 @@ const Navbar = () => {
       <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-          <div className="text-2xl font-bold text-green-700">Tushar.dev</div>
+          <div className="text-2xl font-bold text-green-700">{"<"} Tushar.dev {"/>" }</div>
         </Link>
 
         {/* Desktop Nav Links */}

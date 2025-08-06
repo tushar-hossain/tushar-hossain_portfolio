@@ -5,26 +5,36 @@ import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
   return (
-    <div className="w-11/12 mx-auto py-12 my-18 flex flex-col-reverse lg:flex-row items-center justify-between">
+    <div className="py-12 my-18 flex flex-col-reverse lg:flex-row items-center justify-between">
       {/* Left Text Section */}
-      <div className="text-center md:text-left space-y-5">
-        <h1 className="text-xl mt-5 lg:mt-0 md:text-3xl font-bold text-green-700">
-          <span></span>{" "}
-          <Typewriter
-            cursor
-            cursorBlinking
-            delaySpeed={1000}
-            deleteSpeed={25}
-            loop={0}
-            typeSpeed={75}
-            words={["Hi, I’m", "Md. Tushar Hossain", "MERN Stack Developer"]}
-          />
-        </h1>
-        <p className="text-gray-100 max-w-md">
-          I specialize in creating modern, responsive web applications using
-          React.js, Next.js, Tailwind CSS, Node.js, Express.js and MongoDB.
-          Passionate about clean code and seamless user experience.
-        </p>
+      <div
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        className="text-center md:text-left space-y-5"
+      >
+        <div className="mt-10 lg:mt-0 ">
+          <p className="text-white">Hi, I’m,</p>
+          <h1 className="text-xl mb-3 md:text-3xl font-bold text-green-700">
+            Md. Tushar Hossain
+          </h1>
+          <h1 className="text-xl mt-5 lg:mt-0 md:text-3xl font-bold text-green-700">
+            <Typewriter
+              cursor
+              cursorBlinking
+              delaySpeed={1000}
+              deleteSpeed={25}
+              loop={0}
+              typeSpeed={75}
+              words={["MERN Stack Developer"]}
+            />
+          </h1>
+          <p className="text-gray-100 max-w-md mt-3 text-justify">
+            I building in modern, responsive web applications using technologies
+            like React.js, Next.js, Tailwind CSS, Node.js, Express.js, and
+            MongoDB. I am passionate about writing clean, maintainable code and
+            delivering a smooth, intuitive user experience.
+          </p>
+        </div>
 
         <div className="pt-4">
           {/* Social Icons */}
@@ -63,7 +73,11 @@ const HeroSection = () => {
       </div>
 
       {/* Right Image Section */}
-      <div className="w-40 h-40 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-green-700 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]">
+      <div
+        data-aos="fade-left"
+        data-aos-duration="1500"
+        className="w-40 h-40 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-green-700 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)]"
+      >
         <img
           src={myImage}
           alt="Tushar Hossain"

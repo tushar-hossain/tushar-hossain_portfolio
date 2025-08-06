@@ -17,8 +17,8 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-16 px-4 md:px-8  text-base-content">
-      <div className="max-w-4xl mx-auto">
+    <section id="education" className="py-16 text-base-content">
+      <div>
         <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
           Educational Qualification
         </h2>

@@ -3,8 +3,8 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="text-base-content py-10 px-4">
-      <div className="w-11/12 mx-auto flex flex-col items-center justify-center gap-6">
+    <footer className="text-base-content py-10 px-4 animation w-full">
+      <div className="w-11/12 mx-auto flex flex-col items-center justify-center gap-6 w-full">
         {/* Left: Logo */}
         <div className="text-xl font-bold text-green-700">Tushar.dev</div>
 
@@ -41,6 +41,8 @@ const Footer = () => {
           <p>© 2025 Md. Tushar Hossain All rights reserved.</p>
         </div>
       </div>
+      <div className="animation1 w-[100%] h-40"></div>
+      <div className="animation2 w-[100%]  h-40"></div>
     </footer>
   );
 };

@@ -42,8 +42,8 @@ const ContactInfo = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 md:px-8 text-base-content">
-      <div className="max-w-3xl mx-auto">
+    <section id="contact" className="py-16 text-base-content">
+      <div>
         <h2 className="text-3xl font-bold text-green-700 mb-8 text-center">
           Contact Information
         </h2>
@@ -51,39 +51,41 @@ const ContactInfo = () => {
         <div
           data-aos="fade-up"
           data-aos-duration="3000"
-          className="grid grid-cols-1 md:grid-cols-2"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
         >
-          <div className="space-y-6 text-left">
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-green-700 text-2xl" />
-              <a
-                href="mailto:tusharsu97@gmail.com"
-                className="text-lg text-gray-300 hover:text-green-700"
-              >
-                tusharsu97@gmail.com
-              </a>
-            </div>
+          <div className="space-y-6 bg-[#ffffff0c] rounded-lg shadow-2xl shadow-blue-500/20 flex flex-col justify-center items-center">
+            <div className=" space-y-3">
+              <div className="flex items-center gap-4">
+                <FaEnvelope className="text-green-700 text-2xl" />
+                <a
+                  href="mailto:tusharsu97@gmail.com"
+                  className="text-lg text-gray-300 hover:text-green-700"
+                >
+                  tusharsu97@gmail.com
+                </a>
+              </div>
 
-            <div className="flex items-center gap-4">
-              <FaPhone className="text-green-700 text-2xl" />
-              <a
-                href="tel:+880194371573"
-                className="text-lg text-gray-300 hover:text-green-700"
-              >
-                +880 194371573
-              </a>
-            </div>
+              <div className="flex items-center gap-4">
+                <FaPhone className="text-green-700 text-2xl" />
+                <a
+                  href="tel:+880194371573"
+                  className="text-lg text-gray-300 hover:text-green-700"
+                >
+                  +880 194371573
+                </a>
+              </div>
 
-            <div className="flex items-center gap-4">
-              <FaWhatsapp className="text-green-700 text-2xl" />
-              <a
-                href="https://wa.me/880194371573"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg text-gray-300 hover:text-green-700"
-              >
-                +880 194371573
-              </a>
+              <div className="flex items-center gap-4">
+                <FaWhatsapp className="text-green-700 text-2xl" />
+                <a
+                  href="https://wa.me/880194371573"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg text-gray-300 hover:text-green-700"
+                >
+                  +880 194371573
+                </a>
+              </div>
             </div>
           </div>
           {/* form */}
