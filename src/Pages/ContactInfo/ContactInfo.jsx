@@ -48,12 +48,8 @@ const ContactInfo = () => {
           Contact Information
         </h2>
 
-        <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className="grid grid-cols-1 md:grid-cols-2 gap-5"
-        >
-          <div className="space-y-6 bg-[#ffffff0c] rounded-lg shadow-2xl shadow-blue-500/20 flex flex-col justify-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="space-y-6 bg-[#ffffff0c] rounded-lg shadow-2xl shadow-blue-500/20 flex flex-col justify-center items-center py-5 md:py-0">
             <div className=" space-y-3">
               <div className="flex items-center gap-4">
                 <FaEnvelope className="text-green-700 text-2xl" />

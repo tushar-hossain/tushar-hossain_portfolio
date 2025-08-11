@@ -41,7 +41,7 @@ const projects = [
   {
     id: "course-management-system",
     name: "Course Management System",
-    image: "https://i.ibb.co/PvSVFbt1/bd-programming.png",
+    image: "https://i.ibb.co.com/JFHk5BCK/bd-proframming.png",
     techStack: ["React", "Express", "MongoDB"],
     description:
       "BD Programming is a web-based learning platform designed to help students learn modern web development interactively and efficiently.",

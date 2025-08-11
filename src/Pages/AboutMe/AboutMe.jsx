@@ -7,22 +7,14 @@ const AboutMe = () => {
         About Me
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div
-          data-aos="fade-right"
-          data-aos-duration="1500"
-          className="space-y-6"
-        >
+        <div className="space-y-6">
           <img
             className="w-40 h-40 md:w-80 md:h-80 mx-auto rounded-lg overflow-hidden border-4 border-green-700 shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
             src={myImage}
             alt="my photo"
           />
         </div>
-        <div
-          data-aos="fade-left"
-          data-aos-duration="1500"
-          className="space-y-3 mt-4 md:mt-0"
-        >
+        <div className="space-y-3 mt-4 md:mt-0">
           <p className="text-gray-100 text-lg leading-relaxed text-justify">
             Hey there! I'm{" "}
             <span className="font-semibold">Md. Tushar Hossain</span>, a

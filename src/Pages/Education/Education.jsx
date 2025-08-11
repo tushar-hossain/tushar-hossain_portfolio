@@ -24,8 +24,7 @@ const Education = () => {
         </h2>
 
         <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
+          data-aos="fade-right"
           data-aos-duration="1500"
           className="space-y-6"
         >
