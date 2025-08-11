@@ -29,10 +29,11 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-gray-100 max-w-md mt-3 text-justify">
-            I building in modern, responsive web applications using technologies
-            like React.js, Next.js, Tailwind CSS, Node.js, Express.js, and
-            MongoDB. I am passionate about writing clean, maintainable code and
-            delivering a smooth, intuitive user experience.
+            I’m a dedicated MERN stack developer who loves crafting modern and
+            responsive web applications. I work with tools like React.js,
+            Next.js, Tailwind CSS, Node.js, Express.js, and MongoDB to bring
+            ideas to life. My goal is to write clean, maintainable code while
+            ensuring that users enjoy a smooth and intuitive experience.
           </p>
         </div>
 

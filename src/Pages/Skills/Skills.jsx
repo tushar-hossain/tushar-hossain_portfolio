@@ -1,40 +1,62 @@
-import { FaLaptopCode, FaServer, FaTools } from "react-icons/fa";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
-  const frontend = {
-    title: "Frontend",
-    icon: <FaLaptopCode />,
-    skills: [
-      { name: "HTML5", level: 95 },
-      { name: "CSS3", level: 90 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "React.JS", level: 88 },
-      { name: "Next.JS", level: 80 },
-    ],
-  };
+  const frontend = [
+    { name: "HTML5", image: "https://i.ibb.co.com/ymq1zkSZ/html.png" },
+    { name: "CSS3", image: "https://i.ibb.co.com/jvsnTbSC/css-3.png" },
+    { name: "CSS3", image: "https://i.ibb.co.com/NnsnyChW/bootstrap.png" },
+    {
+      name: "Tailwind",
+      image: "https://i.ibb.co.com/HTvxgNPd/tailwind.png",
+    },
+    { name: "React.JS", image: "https://i.ibb.co.com/FkXqHxKc/react.png" },
+    { name: "Next.JS", image: "https://i.ibb.co.com/0y98Wbbc/nextjs.png" },
+    { name: "HTML5", image: "https://i.ibb.co.com/ymq1zkSZ/html.png" },
+    { name: "CSS3", image: "https://i.ibb.co.com/jvsnTbSC/css-3.png" },
+    { name: "CSS3", image: "https://i.ibb.co.com/NnsnyChW/bootstrap.png" },
+    {
+      name: "Tailwind",
+      image: "https://i.ibb.co.com/HTvxgNPd/tailwind.png",
+    },
+    { name: "React.JS", image: "https://i.ibb.co.com/FkXqHxKc/react.png" },
+    { name: "Next.JS", image: "https://i.ibb.co.com/0y98Wbbc/nextjs.png" },
+    { name: "HTML5", image: "https://i.ibb.co.com/ymq1zkSZ/html.png" },
+    { name: "CSS3", image: "https://i.ibb.co.com/jvsnTbSC/css-3.png" },
+    { name: "CSS3", image: "https://i.ibb.co.com/NnsnyChW/bootstrap.png" },
+    {
+      name: "Tailwind",
+      image: "https://i.ibb.co.com/HTvxgNPd/tailwind.png",
+    },
+    { name: "React.JS", image: "https://i.ibb.co.com/FkXqHxKc/react.png" },
+    { name: "Next.JS", image: "https://i.ibb.co.com/0y98Wbbc/nextjs.png" },
+  ];
 
-  const backend = {
-    title: "Backend",
-    icon: <FaServer />,
-    skills: [
-      { name: "Node.Js", level: 90 },
-      { name: "Express.Js", level: 85 },
-      { name: "MongoDB", level: 87 },
-    ],
-  };
-
-  const tools = {
-    title: "Tools",
-    icon: <FaTools />,
-    skills: [
-      { name: "Git", level: 90 },
-      { name: "GitHub", level: 90 },
-      { name: "Firebase", level: 80 },
-      { name: "Postman", level: 85 },
-      { name: "Figma", level: 90 },
-    ],
-  };
+  const backend = [
+    { name: "Node.Js", image: "https://i.ibb.co.com/0y98Wbbc/nextjs.png" },
+    { name: "Express.Js", image: "https://i.ibb.co.com/8QJBMHm/express.png" },
+    { name: "MongoDB", image: "https://i.ibb.co.com/DfW069xX/mongodb.png" },
+    { name: "Firebase", image: "https://i.ibb.co.com/chqRTPYd/firebase.png" },
+    { name: "Git", image: "https://i.ibb.co.com/ynRpYFrc/git.png" },
+    { name: "Githud", image: "https://i.ibb.co.com/GvzCt3kk/github.png" },
+    {
+      name: "Netlify",
+      image: "https://i.ibb.co.com/hw9q6C5/netlify-removebg-preview.png",
+    },
+    { name: "Postman", image: "https://i.ibb.co.com/KjJyGDrR/postman.png" },
+    { name: "Vercel", image: "https://i.ibb.co.com/N6nR2pNP/vercel.png" },
+    { name: "Node.Js", image: "https://i.ibb.co.com/0y98Wbbc/nextjs.png" },
+    { name: "Express.Js", image: "https://i.ibb.co.com/8QJBMHm/express.png" },
+    { name: "MongoDB", image: "https://i.ibb.co.com/DfW069xX/mongodb.png" },
+    { name: "Firebase", image: "https://i.ibb.co.com/chqRTPYd/firebase.png" },
+    { name: "Git", image: "https://i.ibb.co.com/ynRpYFrc/git.png" },
+    { name: "Githud", image: "https://i.ibb.co.com/GvzCt3kk/github.png" },
+    {
+      name: "Netlify",
+      image: "https://i.ibb.co.com/hw9q6C5/netlify-removebg-preview.png",
+    },
+    { name: "Postman", image: "https://i.ibb.co.com/KjJyGDrR/postman.png" },
+    { name: "Vercel", image: "https://i.ibb.co.com/N6nR2pNP/vercel.png" },
+  ];
 
   return (
     <section id="skills" className="py-16 text-base-content">
@@ -42,14 +64,13 @@ const Skills = () => {
         <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
           Skills
         </h2>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          className="grid md:grid-cols-3 gap-8"
-        >
-          <SkillCard {...frontend} />
-          <SkillCard {...backend} />
-          <SkillCard {...tools} />
+        <div className="flex flex-col gap-5">
+          <h1 className="text-white text-2xl font-bold">Frontend</h1>
+          <SkillCard frontend={frontend} />
+          <h1 className="text-white text-2xl font-bold">
+            Backend & Deployment
+          </h1>
+          <SkillCard frontend={backend} direction={"right"} />
         </div>
       </div>
     </section>

@@ -8,8 +8,7 @@ const AboutMe = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div
-          data-aos="fade-down"
-          data-aos-easing="linear"
+          data-aos="fade-right"
           data-aos-duration="1500"
           className="space-y-6"
         >
@@ -20,26 +19,33 @@ const AboutMe = () => {
           />
         </div>
         <div
-          data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos="fade-left"
+          data-aos-duration="1500"
           className="space-y-3 mt-4 md:mt-0"
         >
           <p className="text-gray-100 text-lg leading-relaxed text-justify">
-            Hello! I’m <span className="font-semibold">Md. Tushar Hossain</span>
-            , a passionate{" "}
-            <span className="font-semibold">MERN Stack Web Developer</span>{" "}
-            dedicated to building efficient and scalable web applications. My
-            programming journey started back at university, where I quickly
-            developed a genuine interest in web development. Since then, I’ve
-            been focused on creating projects using the MERN stack, including
-            tools like React.js, Next.js, Tailwind CSS, Node.js, Express.js, and
-            MongoDB.
+            Hey there! I'm{" "}
+            <span className="font-semibold">Md. Tushar Hossain</span>, a
+            dedicated{" "}
+            <span className="font-semibold">MERN Stack Web Developer</span> with
+            a passion for transforming ideas into practical, user-friendly web
+            applications. My adventure in programming kicked off back in
+            university, where a simple curiosity about how websites function
+            blossomed into a full-blown commitment to mastering web development.
             <p>
-              I prioritize writing clean, maintainable code that adheres to
-              industry best practices. Outside of work, I love spending time in
-              nature, exploring emerging technologies, and playing sports. I’m
-              always eager to learn, grow, and take on new challenges that help
-              me become a better developer.
+              Since then, I've rolled up my sleeves and tackled projects using
+              technologies like React.js, Next.js, Tailwind CSS, Node.js,
+              Express.js, and MongoDB. I always aim for clean, maintainable code
+              and a smooth user experience. I thrive on solving problems,
+              picking up new tools, and honing my skills with every project I
+              dive into.
+            </p>
+            <p>
+              When I'm not glued to my computer screen, you can usually find me
+              outside soaking up nature, keeping up with the latest tech trends,
+              or playing sports. My drive comes from curiosity, a desire to
+              grow, and the thrill of crafting solutions that truly make a
+              difference.
             </p>
           </p>
         </div>
