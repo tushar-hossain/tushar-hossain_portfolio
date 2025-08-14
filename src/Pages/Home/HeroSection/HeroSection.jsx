@@ -29,7 +29,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen hero-section section-padding overflow-hidden py-28"
+      className="relative min-h-screen hero-section section-padding overflow-hidden py-30"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Animated Background Elements */}

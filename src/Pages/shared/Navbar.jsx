@@ -208,7 +208,7 @@ const Navbar = () => {
         `}
       >
         <div className="bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/30 mx-4 mb-4 rounded-2xl shadow-2xl shadow-slate-900/50">
-          <div className="p-6 space-y-2">
+          <div className="p-2 space-y-1">
             {navItems.map((item, index) => (
               <button
                 key={item.name}
