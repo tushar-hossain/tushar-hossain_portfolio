@@ -10,49 +10,4 @@
 
 body {
   background-color: #020618;
-  
-}
-
-.animation {
-  color: white;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  z-index: 1;
-}
-.animation1 {
-  animation: img1 1s infinite running;
-  position: absolute;
-  background: url(/footer-shape1.png) no-repeat;
-}
-.animation2 {
-  position: absolute;
-  animation: img2 1s infinite running;
-  background-image: url(/footer-shape2.png);
-}
-@keyframes img1 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes img2 {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.animation::after {
-  content: "";
 }

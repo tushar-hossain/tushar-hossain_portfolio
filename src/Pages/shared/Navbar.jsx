@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, X, Download, Code2 } from "lucide-react";
 import { Link } from "react-router";
 
 const navItems = [
@@ -12,125 +12,255 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const [activeSection, setActiveSection] = useState("");
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
-  // Listen to scroll event
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY + window.innerHeight / 3;
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 50);
 
-      for (const item of navItems) {
+      const scrollPos = window.scrollY + 100;
+      let currentSection = "home";
+
+      for (const item of [...navItems].reverse()) {
         const section = document.getElementById(item.path);
-        if (section) {
-          const offsetTop = section.offsetTop;
-          const offsetBottom = offsetTop + section.offsetHeight;
-          if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
-            setActiveSection(item.path);
-            break;
-          }
+        if (section && scrollPos >= section.offsetTop) {
+          currentSection = item.path;
+          break;
         }
       }
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to section function
   const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    if (element) {
+      const offsetTop = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
     }
+    setIsOpen(false);
   };
 
   const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Resume_of_Md_Tushar_Hossain.pdf";
-    link.download = "Resume_of_Md_Tushar_Hossain.pdf";
-    link.click();
+    try {
+      const link = document.createElement("a");
+      link.href = "/Resume_of_Md_Tushar_Hossain.pdf";
+      link.download = "Md_Tushar_Hossain_MERN_Developer.pdf";
+      link.target = "_blank";
+      link.click();
+    } catch (error) {
+      console.error("Error downloading resume:", error);
+    }
   };
 
-  const navLinkClass =
-    "font-medium text-gray-700 hover:text-green-700 transition";
-
   return (
-    <nav className="fixed top-0 w-full bg-[#020618]  shadow-md z-50 py-3">
-      <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/">
-          <div className="text-2xl font-bold text-green-700">{"<"} Tushar.dev {"/>" }</div>
+    <nav
+      className={`
+        fixed top-0 w-full z-50 transition-all duration-500
+        ${
+          scrolled
+            ? "bg-slate-900/95 backdrop-blur-xl shadow-2xl shadow-slate-900/20 border-b border-slate-700/30"
+            : "bg-slate-900/90"
+        }
+      `}
+      style={{ fontFamily: "'Inter', sans-serif" }}
+    >
+      <div className="w-11/12 max-w-7xl mx-auto py-4 flex justify-between items-center">
+        {/* Premium Logo Design */}
+        <Link to="/" onClick={() => scrollToSection("home")}>
+          <div className="flex items-center space-x-3 cursor-pointer group">
+            <div className="relative">
+              <Code2
+                size={28}
+                className="text-blue-500 group-hover:text-blue-400 transition-all duration-300 group-hover:rotate-12"
+              />
+              <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-lg group-hover:bg-blue-400/30 transition-all duration-300" />
+            </div>
+            <div className="font-mono text-2xl font-bold tracking-tight">
+              <span className="text-slate-100 group-hover:text-blue-100 transition-colors duration-300">
+                Tushar
+              </span>
+              <span className="text-blue-500 group-hover:text-blue-400 transition-colors duration-300">
+                .dev
+              </span>
+            </div>
+          </div>
         </Link>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex space-x-6">
-          {navItems.map((item) => (
-            <span
+        {/* Premium Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-1">
+          {navItems.map((item, index) => (
+            <button
               key={item.name}
               onClick={() => scrollToSection(item.path)}
-              className={`${navLinkClass} ${
-                activeSection === item.path
-                  ? "text-green-800 font-semibold cursor-pointer underline"
-                  : "cursor-pointer  text-green-700"
-              }`}
+              className={`
+                relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300
+                group overflow-hidden
+                ${
+                  activeSection === item.path
+                    ? "text-blue-400 bg-blue-500/10 font-semibold"
+                    : "text-slate-300 hover:text-blue-400 hover:bg-slate-800/50"
+                }
+              `}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              {item.name}
-            </span>
+              <span className="relative z-10">{item.name}</span>
+
+              {/* Animated background */}
+              <div
+                className={`
+                  absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-600/10 
+                  transition-all duration-300 rounded-lg
+                  ${
+                    activeSection === item.path
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
+                  }
+                `}
+              />
+
+              {/* Bottom indicator */}
+              <div
+                className={`
+                  absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-blue-500 rounded-full
+                  transition-all duration-300
+                  ${activeSection === item.path ? "w-8" : "w-0 group-hover:w-6"}
+                `}
+              />
+            </button>
           ))}
         </div>
 
-        {/* Resume Button */}
-        <div className="hidden md:block">
+        {/* Premium CTA Button */}
+        <div className="hidden md:flex items-center">
           <button
             onClick={handleResumeDownload}
-            className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-sm transition hover:shadow-sm shadow-white cursor-pointer"
+            className="
+              group relative overflow-hidden
+              bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800
+              hover:from-blue-500 hover:via-blue-600 hover:to-blue-700
+              text-white font-semibold text-sm
+              px-6 py-3 rounded-xl
+              transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5
+              shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-500/40
+              flex items-center space-x-2
+              border border-blue-500/30 hover:border-blue-400/50
+            "
           >
-            Download Resume
+            <Download
+              size={16}
+              className="group-hover:animate-bounce transition-transform duration-300"
+            />
+            <span className="relative">Download Resume</span>
+
+            {/* Premium shine effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+            {/* Glow effect */}
+            <div className="absolute inset-0 rounded-xl bg-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
           </button>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Premium Mobile Toggle */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? (
-              <X size={24} className="text-white" />
-            ) : (
-              <Menu className="text-white" size={24} />
-            )}
+          <button
+            onClick={toggleMenu}
+            className={`
+              relative p-3 rounded-xl transition-all duration-300
+              ${
+                isOpen
+                  ? "text-blue-400 bg-slate-800/80 shadow-lg shadow-blue-500/20"
+                  : "text-slate-300 hover:text-blue-400 hover:bg-slate-800/50"
+              }
+            `}
+            aria-label="Toggle menu"
+          >
+            <div className="relative">
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+              {isOpen && (
+                <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-lg" />
+              )}
+            </div>
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white px-4 pb-4">
-          <div className="flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <span
+      {/* Premium Mobile Menu */}
+      <div
+        className={`
+          md:hidden transition-all duration-500 ease-out overflow-hidden
+          ${
+            isOpen
+              ? "max-h-96 opacity-100 translate-y-0"
+              : "max-h-0 opacity-0 -translate-y-8"
+          }
+        `}
+      >
+        <div className="bg-slate-800/95 backdrop-blur-xl border-t border-slate-700/30 mx-4 mb-4 rounded-2xl shadow-2xl shadow-slate-900/50">
+          <div className="p-6 space-y-2">
+            {navItems.map((item, index) => (
+              <button
                 key={item.name}
                 onClick={() => scrollToSection(item.path)}
-                className={`${navLinkClass} ${
-                  activeSection === item.path
-                    ? "text-green-800 font-semibold"
-                    : ""
-                }`}
+                className={`
+                  w-full text-left py-4 px-5 rounded-xl font-medium text-sm
+                  transition-all duration-300 relative overflow-hidden group
+                  ${
+                    activeSection === item.path
+                      ? "text-blue-400 bg-blue-500/10 font-semibold shadow-lg shadow-blue-500/10"
+                      : "text-slate-300 hover:text-blue-400 hover:bg-slate-700/50"
+                  }
+                `}
+                style={{
+                  animationDelay: `${index * 50}ms`,
+                }}
               >
-                {item.name}
-              </span>
+                <span className="relative z-10">{item.name}</span>
+
+                {/* Mobile item indicator */}
+                <div
+                  className={`
+                    absolute left-0 top-0 bottom-0 w-1 bg-blue-500 rounded-r-full
+                    transition-all duration-300
+                    ${activeSection === item.path ? "opacity-100" : "opacity-0"}
+                  `}
+                />
+              </button>
             ))}
+
+            {/* Mobile CTA */}
             <button
               onClick={() => {
                 handleResumeDownload();
                 setIsOpen(false);
               }}
-              className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-sm transition hover:shadow-sm shadow-white"
+              className="
+                w-full mt-6 py-4 px-6 rounded-xl font-semibold text-sm
+                bg-gradient-to-r from-blue-600 to-blue-700 
+                hover:from-blue-500 hover:to-blue-600
+                text-white transition-all duration-300
+                flex items-center justify-center space-x-2
+                shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-500/40
+                border border-blue-500/30
+              "
             >
-              Download Resume
+              <Download size={16} />
+              <span>Download Resume</span>
             </button>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
