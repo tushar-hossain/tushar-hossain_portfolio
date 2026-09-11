@@ -17,7 +17,12 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-16 bg-slate-900 text-white">
+    <section
+      id="education"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="py-16 bg-slate-900 text-white"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-blue-400 mb-12">
           Educational Qualification

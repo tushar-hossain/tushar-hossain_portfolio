@@ -48,11 +48,21 @@ const Skills = () => {
       image: "https://i.ibb.co.com/NnsnyChW/bootstrap.png",
       level: "Advanced",
     },
-    // {
-    //   name: "TypeScript",
-    //   image: "https://i.ibb.co.com/0y98Wbbc/nextjs.png",
-    //   level: "Learning",
-    // },
+    {
+      name: "TypeScript",
+      image: "https://i.ibb.co.com/v4h2qVSt/typescript.png",
+      level: "Advanced",
+    },
+    {
+      name: "Ant Design",
+      image: "https://i.ibb.co.com/W438KzCR/Ant-Design.png",
+      level: "Advanced",
+    },
+    {
+      name: "Shadcn UI",
+      image: "https://i.ibb.co.com/XfYZK3mf/Shadcn-UI.png",
+      level: "Advanced",
+    },
   ];
 
   const backend = [
@@ -67,6 +77,10 @@ const Skills = () => {
     {
       name: "MongoDB",
       image: "https://i.ibb.co.com/DfW069xX/mongodb.png",
+    },
+    {
+      name: "Supabase",
+      image: "https://i.ibb.co.com/R4TCVCVD/supabase.png",
     },
     {
       name: "Firebase",
@@ -119,6 +133,16 @@ const Skills = () => {
       image: "https://i.ibb.co.com/M51yGt9M/figma.png",
       level: "Basic",
     },
+    {
+      name: "Antigravity",
+      image: "https://i.ibb.co.com/Kj5NfG1k/Antigravity.jpg",
+      level: "Basic",
+    },
+    {
+      name: "Cursor",
+      image: "https://i.ibb.co.com/1HrFkFf/cursor.webp",
+      level: "Basic",
+    },
   ];
 
   // Skill categories for better organization
@@ -126,7 +150,8 @@ const Skills = () => {
     {
       icon: FaCode,
       title: "Frontend Development",
-      description: "Creating responsive and interactive user interfaces",
+      description:
+        "Building responsive, reusable, and user-friendly interfaces",
       skills: frontend,
       color: "text-blue-400",
       bgColor: "from-blue-500/10 to-blue-600/10",
@@ -135,7 +160,8 @@ const Skills = () => {
     {
       icon: FaServer,
       title: "Backend & Database",
-      description: "Building robust server-side applications and APIs",
+      description:
+        "Developing APIs, authentication, and data-driven applications",
       skills: backend,
       color: "text-blue-400",
       bgColor: "from-blue-500/10 to-blue-600/10",
@@ -143,8 +169,9 @@ const Skills = () => {
     },
     {
       icon: FaTools,
-      title: "Development Tools",
-      description: "Professional development and deployment workflow",
+      title: "Tools & Platforms",
+      description:
+        "Using modern tools for development, testing, version control, and deployment",
       skills: tools,
       color: "text-blue-400",
       bgColor: "from-blue-500/10 to-blue-600/10",
@@ -153,32 +180,32 @@ const Skills = () => {
   ];
 
   // Professional summary stats
-  // const skillStats = [
-  //   {
-  //     icon: FaCode,
-  //     number: "6+",
-  //     label: "Technologies",
-  //     color: "text-blue-400",
-  //   },
-  //   {
-  //     icon: FaRocket,
-  //     number: "3+",
-  //     label: "Projects",
-  //     color: "text-emerald-400",
-  //   },
-  //   // {
-  //   //   icon: FaStar,
-  //   //   number: "2+",
-  //   //   label: "Years Experience",
-  //   //   color: "text-purple-400",
-  //   // },
-  //   {
-  //     icon: FaChartLine,
-  //     number: "100%",
-  //     label: "Learning Growth",
-  //     color: "text-orange-400",
-  //   },
-  // ];
+  const skillStats = [
+    {
+      icon: FaCode,
+      number: "6+",
+      label: "Technologies",
+      color: "text-blue-400",
+    },
+    {
+      icon: FaRocket,
+      number: "3+",
+      label: "Projects",
+      color: "text-emerald-400",
+    },
+    {
+      icon: FaStar,
+      number: "1+",
+      label: "Years Experience",
+      color: "text-purple-400",
+    },
+    {
+      icon: FaChartLine,
+      number: "100%",
+      label: "Learning Growth",
+      color: "text-orange-400",
+    },
+  ];
 
   return (
     <section
@@ -186,7 +213,7 @@ const Skills = () => {
       className="skills-section section-padding my-24"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
-      <div className="w-11/12 max-w-7xl mx-auto">
+      <div>
         {/* Section Header */}
         <div
           data-aos="fade-up"
@@ -202,12 +229,12 @@ const Skills = () => {
             My <span className="text-blue-400">Skills</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
-            Proficient in modern web technologies with a focus on creating
-            scalable, maintainable, and user-centric applications
+            I work with modern frontend and backend technologies to build
+            responsive, maintainable, and user-focused web applications.
           </p>
 
           {/* Skill Stats */}
-          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {skillStats.map((stat, index) => (
               <div
                 key={index}
@@ -226,7 +253,7 @@ const Skills = () => {
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
 
         {/* Skill Categories */}
@@ -277,12 +304,12 @@ const Skills = () => {
         </div>
 
         {/* Learning Journey */}
-        <div
+        {/* <div
           data-aos="fade-up"
           data-aos-duration="1000"
           className="mt-16 text-center"
         >
-          <div className="card p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20 max-w-4xl mx-auto">
+          <div className="card p-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20 ">
             <FaRocket className="text-blue-400 text-4xl mx-auto mb-4 animate-bounce" />
             <h3 className="text-2xl font-bold text-slate-100 mb-4">
               Continuous Learning Journey
@@ -302,11 +329,11 @@ const Skills = () => {
                   >
                     {tech}
                   </span>
-                )
+                ),
               )}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

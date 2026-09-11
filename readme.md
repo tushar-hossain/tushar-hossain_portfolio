@@ -9,6 +9,7 @@ Welcome to my developer portfolio website! This is a personal single-page applic
 ## 📄 Sections Included
 
 - **Hero Section** – Designation, photo, and resume download
+- **Professional Experience** – Internship and Junior Software Developer experience at Edutechs Limited
 - **About Me** – Brief background, journey, and interests
 - **Skills** – Frontend, Backend, Tools (with graphical representation)
 - **Education** – Academic qualifications

@@ -287,8 +287,8 @@ const EnhancedPortfolio = () => {
   return (
     <div id="projects" className="min-h-screen ">
       {/* Projects Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16">
+        <div data-aos="fade-up" data-aos-duration="1000">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-blue-400 mb-4">Projects</h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">

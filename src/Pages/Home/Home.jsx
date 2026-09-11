@@ -4,6 +4,7 @@ import Skills from "../Skills/Skills";
 import Education from "../Education/Education";
 import Projects from "../Projects/Projects";
 import ContactInfo from "../ContactInfo/ContactInfo";
+import ProfessionalExperience from "../ProfessionalExperience/ProfessionalExperience";
 
 const Home = () => {
   return (
@@ -12,6 +13,9 @@ const Home = () => {
       <section>
         <HeroSection />
       </section>
+
+      {/* Professional Experience section */}
+      <ProfessionalExperience />
 
       {/* about me section */}
       <section>
