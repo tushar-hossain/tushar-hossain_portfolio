@@ -45,7 +45,7 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="relative z-10 w-11/12 max-w-7xl mx-auto">
+      <div className="relative z-10 ">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-20">
           {/* Left Content Section */}
           <div
@@ -85,9 +85,10 @@ const HeroSection = () => {
                   loop={0}
                   typeSpeed={100}
                   words={[
+                    "React.js Developer",
+                    "Frontend Developer",
                     "MERN Stack Developer",
-                    "React.js Specialist",
-                    "JavaScript Expert",
+                    "Software Developer",
                   ]}
                 />
               </div>
@@ -96,14 +97,21 @@ const HeroSection = () => {
             {/* Enhanced Description */}
             <div className="space-y-4 max-w-2xl">
               <p className="text-slate-300 text-lg leading-relaxed">
-                I'm a passionate{" "}
+                I'm a{" "}
                 <span className="text-blue-400 font-semibold">
-                  MERN Stack Developer
+                  {" "}
+                  React.js Developer{" "}
                 </span>{" "}
-                who loves turning ideas into functional, user-friendly web
-                applications. With a solid foundation in modern web
-                technologies, I'm eager to grow my skills, take on challenges,
-                and contribute to projects that make a real impact.
+                <span>
+                  with professional experience building enterprise web
+                  applications using React.js, TypeScript, Firebase, and REST
+                  APIs. I focus on creating responsive, reusable, and
+                  user-friendly interfaces while turning complex business
+                  requirements into practical, maintainable solutions. With a
+                  strong foundation in the MERN stack, I enjoy solving problems,
+                  writing clean code, and continuously improving my skills as a
+                  software engineer.
+                </span>
               </p>
 
               {/* Key Skills Pills */}
@@ -111,6 +119,8 @@ const HeroSection = () => {
                 {[
                   "React.js",
                   "Node.js",
+                  "Firebase",
+                  "REST APIs",
                   "MongoDB",
                   "Express.js",
                   "Next.js",
@@ -189,7 +199,7 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button
                   onClick={() => scrollToSection("projects")}
-                  className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-500/40 flex items-center justify-center space-x-2"
+                  className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-500/40 flex items-center justify-center space-x-2 cursor-pointer"
                 >
                   <FaLaptopCode className="group-hover:rotate-12 transition-transform duration-300" />
                   <span>View My Work</span>
@@ -201,7 +211,7 @@ const HeroSection = () => {
 
                 <button
                   onClick={handleResumeDownload}
-                  className="group relative overflow-hidden bg-transparent hover:bg-slate-800/50 text-blue-400 hover:text-blue-300 font-semibold px-8 py-4 rounded-xl border-2 border-blue-500/50 hover:border-blue-400 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm hover:shadow-lg hover:shadow-blue-500/20"
+                  className="group relative overflow-hidden bg-transparent hover:bg-slate-800/50 text-blue-400 hover:text-blue-300 font-semibold px-8 py-4 rounded-xl border-2 border-blue-500/50 hover:border-blue-400 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer"
                 >
                   <FaDownload className="group-hover:animate-bounce transition-transform duration-300" />
                   <span>Download Resume</span>
@@ -251,7 +261,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div
+        {/* <div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer group"
           onClick={() => scrollToSection("about")}
           data-aos="fade-up"
@@ -266,7 +276,7 @@ const HeroSection = () => {
               <div className="w-1 h-3 bg-current rounded-full animate-bounce mt-2" />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

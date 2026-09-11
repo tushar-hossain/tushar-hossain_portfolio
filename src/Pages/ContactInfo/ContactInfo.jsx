@@ -18,7 +18,6 @@ const ContactInfo = () => {
 
   const handleEmailForm = async (e) => {
     e.preventDefault();
-    console.log(form.current);
 
     try {
       emailjs
@@ -28,7 +27,7 @@ const ContactInfo = () => {
           form.current,
           {
             publicKey: import.meta.env.VITE_PUBLIC_KEY,
-          }
+          },
         )
         .then(
           () => {
@@ -42,8 +41,8 @@ const ContactInfo = () => {
             e.target.reset();
           },
           (error) => {
-            console.log("FAILED...", error.text);
-          }
+            console.error("FAILED...", error.text);
+          },
         );
     } catch (error) {
       Swal.fire({
@@ -104,15 +103,15 @@ const ContactInfo = () => {
 
   return (
     <section id="contact" className="mb-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div data-aos="fade-up" data-aos-duration="1000">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-blue-400 mb-4">
             Let's Work Together
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear from you. Send me a message
-            and let's discuss how we can bring your ideas to life.
+            Looking for a React.js Developer or have an opportunity to discuss?
+            I'd love to hear from you. Feel free to reach out and let's connect.
           </p>
         </div>
 

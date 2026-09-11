@@ -1,43 +1,37 @@
-import React from "react";
 import {
-  FaGraduationCap,
   FaCode,
   FaLightbulb,
   FaRocket,
-  FaHeart,
-  FaMountain,
-  FaBook,
   FaAward,
+  FaBriefcase,
 } from "react-icons/fa";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { BsCalendar3 } from "react-icons/bs";
 import myImage from "../../assets/images/tushar-2.jpg";
 
 const AboutMe = () => {
   // Personal stats that recruiters love to see
   const stats = [
     {
-      icon: FaRocket,
+      icon: FaBriefcase,
+      number: "1+",
+      label: "Years Experience",
+      color: "text-blue-400",
+    },
+    {
+      icon: FaCode,
       number: "3+",
       label: "Projects Built",
       color: "text-blue-400",
     },
     {
+      icon: FaRocket,
+      number: "2",
+      label: "Professional Roles",
+      color: "text-blue-400",
+    },
+    {
       icon: FaLightbulb,
-      number: "6+",
+      number: "10+",
       label: "Technologies",
-      color: "text-blue-400",
-    },
-    {
-      icon: FaAward,
-      number: "1",
-      label: "Certifications",
-      color: "text-blue-400",
-    },
-    {
-      icon: FaCode,
-      number: "1+",
-      label: "Years Learning",
       color: "text-blue-400",
     },
   ];
@@ -45,39 +39,27 @@ const AboutMe = () => {
   // What makes you unique as a developer
   const highlights = [
     {
+      icon: FaBriefcase,
+      title: "Professional Experience",
+      description:
+        "Hands-on experience building enterprise web applications and business workflows.",
+      color: "text-blue-400",
+    },
+    {
       icon: FaCode,
-      title: "MERN-Stack Expertise",
-      description: "End-to-end development from backend to user interfaces",
+      title: "React & TypeScript",
+      description:
+        "Focused on building reusable, responsive, and maintainable React interfaces.",
       color: "text-emerald-400",
     },
-    // {
-    //   icon: FaLightbulb,
-    //   title: "Problem Solver",
-    //   description:
-    //     "Love tackling complex challenges and finding elegant solutions",
-    //   color: "text-purple-400",
-    // },
     {
-      icon: FaRocket,
-      title: "Fast Learner",
+      icon: FaLightbulb,
+      title: "Continuous Learner",
       description:
-        "Quickly adapt to new technologies and development practices",
+        "Continuously improving my skills by exploring modern technologies and solving real-world problems.",
       color: "text-orange-400",
     },
-    // {
-    //   icon: FaGraduationCap,
-    //   title: "Computer Science Background",
-    //   description: "Strong foundation in programming fundamentals",
-    //   color: "text-blue-400",
-    // },
   ];
-
-  // Personal interests that show you're well-rounded
-  // const interests = [
-  //   { icon: FaMountain, name: "Nature & Hiking", color: "text-emerald-400" },
-  //   { icon: FaBook, name: "Tech Trends", color: "text-purple-400" },
-  //   { icon: FaHeart, name: "Sports", color: "text-red-400" },
-  // ];
 
   return (
     <section
@@ -88,7 +70,7 @@ const AboutMe = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="1000"
-        className="w-11/12 max-w-7xl mx-auto"
+        // className="w-11/12 max-w-7xl mx-auto"
       >
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -101,7 +83,8 @@ const AboutMe = () => {
             About <span className="text-blue-400">Me</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            A passionate developer who creatively builds digital solutions
+            React.js Developer focused on building modern, responsive, and
+            maintainable web applications.
           </p>
         </div>
 
@@ -120,23 +103,6 @@ const AboutMe = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </div>
-
-            {/* Quick Info Cards */}
-            {/* <div className="grid grid-cols-2 gap-4">
-              <div className="card p-6 text-center group hover:scale-105 transition-transform duration-300">
-                <HiOutlineLocationMarker className="text-blue-400 text-2xl mx-auto mb-2 group-hover:animate-bounce" />
-                <h4 className="font-semibold text-slate-200 mb-1">Location</h4>
-                <p className="text-slate-400 text-sm">Dhaka, Bangladesh</p>
-              </div>
-
-              <div className="card p-6 text-center group hover:scale-105 transition-transform duration-300">
-                <BsCalendar3 className="text-emerald-400 text-2xl mx-auto mb-2 group-hover:animate-bounce" />
-                <h4 className="font-semibold text-slate-200 mb-1">
-                  Experience
-                </h4>
-                <p className="text-slate-400 text-sm">2+ Years Learning</p>
-              </div>
-            </div> */}
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
@@ -171,34 +137,35 @@ const AboutMe = () => {
                   <span className="font-semibold text-blue-400">
                     Md. Tushar Hossain,
                   </span>{" "}
-                  a passionate{" "}
+                  a{" "}
                   <span className="font-semibold text-blue-400">
-                    MERN Stack Developer
+                    React.js Developer
                   </span>{" "}
-                  dedicated to building clean, scalable and user-friendly web
-                  applications. I started my journey in MERN Stack Development
-                  from my university, where curiosity about websites turned into
-                  a deep passion for building digital experiences.
+                  currently working as a Junior Software Developer at Edutechs
+                  Limited. I build responsive and user-friendly web applications
+                  using React.js, TypeScript, Firebase, and REST APIs.
                 </p>
 
                 <p>
-                  I am an expert in{" "}
+                  My professional experience includes working on{" "}
                   <span className="font-semibold text-blue-400">
-                    React.js, Next.js, Node.js, Express.js and MongoDB,
+                    enterprise applications
                   </span>{" "}
-                  with a keen interest in learning and exploring emerging
-                  technologies. As a fresher, I am driven by problem solving,
-                  collaboration and building impactful projects.
+                  and complex business workflows such as HRM, invoicing,
+                  inventory, reservations, billing, and document management. I
+                  enjoy turning business requirements into reusable,
+                  maintainable, and practical frontend solutions.
                 </p>
 
                 <p>
-                  Outside of coding, I enjoy tackling{" "}
+                  I also have a strong foundation in the{" "}
                   <span className="font-semibold text-blue-400">
-                    Full stack
+                    MERN stack
                   </span>{" "}
-                  challenges, exploring technical trends and working on personal
-                  projects to improve my skills. From intuitive UI to optimized
-                  backend, I love every part of the process.
+                  through personal projects and hands-on development. I'm
+                  passionate about learning new technologies, improving my
+                  problem-solving skills, and continuously growing as a software
+                  developer.
                 </p>
               </div>
 
@@ -233,37 +200,6 @@ const AboutMe = () => {
                 </div>
               </div>
 
-              {/* Beyond Coding */}
-              {/* <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-slate-100">
-                  Beyond Coding
-                </h3>
-                <p className="text-slate-300 leading-relaxed">
-                  When I'm not immersed in code, you'll find me exploring
-                  nature, staying updated with the latest tech trends, or
-                  engaging in sports activities. I believe in maintaining a
-                  healthy work-life balance, as it fuels my creativity and keeps
-                  me motivated to tackle new challenges.
-                </p>
-
-               
-                <div className="flex flex-wrap gap-3 pt-4">
-                  {interests.map((interest, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center space-x-2 bg-slate-800/30 hover:bg-slate-800/50 px-4 py-2 rounded-full transition-all duration-300 group"
-                    >
-                      <interest.icon
-                        className={`${interest.color} group-hover:animate-bounce`}
-                      />
-                      <span className="text-slate-300 text-sm font-medium">
-                        {interest.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div> */}
-
               {/* Call to Action */}
               <div>
                 <div className="card p-6 bg-gradient-to-r from-blue-500/10 to-blue-600/10 border-blue-500/20">
@@ -284,7 +220,9 @@ const AboutMe = () => {
                       }
                       className="btn-primary flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
                     >
-                      <span className="text-white">Get In Touch</span>
+                      <span className="text-white cursor-pointer">
+                        Get In Touch
+                      </span>
                       <FaRocket className="hover:animate-bounce text-[#00d492]" />
                     </button>
                   </div>

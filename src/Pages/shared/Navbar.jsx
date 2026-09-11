@@ -4,6 +4,7 @@ import { Link } from "react-router";
 
 const navItems = [
   { name: "Home", path: "home" },
+  { name: "Experience", path: "experience" },
   { name: "About", path: "about" },
   { name: "Skills", path: "skills" },
   { name: "Projects", path: "projects" },
@@ -100,12 +101,12 @@ const Navbar = () => {
 
         {/* Premium Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
-          {navItems.map((item, index) => (
+          {navItems?.map((item, index) => (
             <button
               key={item.name}
               onClick={() => scrollToSection(item.path)}
               className={`
-                relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300
+                relative px-4 cursor-pointer py-2 rounded-lg font-medium text-sm transition-all duration-300
                 group overflow-hidden
                 ${
                   activeSection === item.path
@@ -147,7 +148,7 @@ const Navbar = () => {
           <button
             onClick={handleResumeDownload}
             className="
-              group relative overflow-hidden
+              group relative cursor-pointer overflow-hidden
               bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800
               hover:from-blue-500 hover:via-blue-600 hover:to-blue-700
               text-white font-semibold text-sm
