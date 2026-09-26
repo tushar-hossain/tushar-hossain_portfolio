@@ -124,6 +124,7 @@ const HeroSection = () => {
                   "MongoDB",
                   "Express.js",
                   "Next.js",
+                  "TypeScript",
                   "Tailwind CSS",
                 ].map((skill, index) => (
                   <span
@@ -186,7 +187,7 @@ const HeroSection = () => {
                     <FaLinkedin className="text-lg group-hover:rotate-12 transition-transform duration-300" />
                   </a>
                   <a
-                    href="mailto:tushar@example.com" // Add your email
+                    href="mailto:tusharsu97@gmail.com"
                     className="group p-3 bg-slate-800/50 hover:bg-slate-700/70 text-slate-400 hover:text-blue-400 rounded-xl transition-all duration-300 border border-slate-700/50 hover:border-blue-500/50 backdrop-blur-sm hover:scale-110"
                     aria-label="Email"
                   >
@@ -202,7 +203,7 @@ const HeroSection = () => {
                   className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-500/40 flex items-center justify-center space-x-2 cursor-pointer"
                 >
                   <FaLaptopCode className="group-hover:rotate-12 transition-transform duration-300" />
-                  <span>View My Work</span>
+                  <span>View My Projects</span>
                   <BsArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
 
                   {/* Shine effect */}

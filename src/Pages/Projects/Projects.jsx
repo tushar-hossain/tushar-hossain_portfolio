@@ -11,6 +11,33 @@ import {
 
 const projects = [
   {
+    id: "gocarry",
+    name: "GoCarry – Parcel Delivery Platform",
+    image: "https://i.ibb.co.com/prXvTn5Q/go-carry.png",
+    techStack: [
+      "React",
+      "Firebase",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "TanStack Query",
+    ],
+    shortDescription:
+      "A full-stack parcel delivery platform for booking, tracking, payments, rider management, and logistics operations.",
+    description:
+      "GoCarry is a modern parcel delivery and logistics platform built with the MERN stack. It provides customers with parcel booking and delivery tracking, while admins can manage users, riders, warehouses, parcels, payments, and delivery operations. The platform also includes role-based dashboards, Firebase authentication, Stripe payments, notifications, and Bangladesh-wide warehouse coverage.",
+    challenges:
+      "Implementing the complete delivery workflow was challenging, especially connecting parcel creation, Stripe payments, rider assignment, delivery status updates, authentication, and role-based access control across the frontend and backend.",
+    improvements:
+      "Plan to add real-time delivery tracking, improved rider route management, more detailed analytics, and enhanced notification features.",
+    liveLink: "https://gocarry-acfd5.web.app/",
+    githubClient: "https://github.com/tushar-hossain/GoCarry-client-side",
+    githubServer: "https://github.com/tushar-hossain/GoCarry-server-side",
+  },
+  {
     id: "forum-web-application",
     name: "Forum Web Application",
     image: "https://i.ibb.co/v63f9MGK/thread-Nest.png",
@@ -41,29 +68,6 @@ const projects = [
     githubServer: "https://github.com/tushar-hossain/thread-next-server-side",
   },
   {
-    id: "gardeners-community",
-    name: "Gardeners Community",
-    image: "https://i.ibb.co/rKThzQdr/gradening.png",
-    techStack: [
-      "React",
-      "Firebase",
-      "Node.js",
-      "MongoDB",
-      "Tailwind CSS",
-      "DaisyUI",
-    ],
-    shortDescription:
-      "A dynamic gardening community platform for sharing tips, discovering events, and connecting with fellow gardeners.",
-    description:
-      "GardenSphere brings gardening enthusiasts together to share knowledge regardless of skill level. Built on the MERN stack, it offers gardening events, gardener profiles with tips and expertise, and promotes sustainable gardening through collaborative learning.",
-    challenges:
-      "Implementing a Like button that updates likes in the database was challenging. I researched many resources and successfully integrated this feature.",
-    improvements:
-      "Plan to add real-time chat between gardeners and enhanced mobile interface.",
-    liveLink: "https://gardening-community-5a4c1.web.app/",
-    githubClient: "https://github.com/tushar-hossain/Gardeners_Community",
-  },
-  {
     id: "course-management-system",
     name: "Course Management System",
     image: "https://i.ibb.co.com/JFHk5BCK/bd-proframming.png",
@@ -89,6 +93,29 @@ const projects = [
     githubServer:
       "https://github.com/tushar-hossain/Course_Management_System/tree/main/course-management-system-server",
   },
+  {
+    id: "gardeners-community",
+    name: "Gardeners Community",
+    image: "https://i.ibb.co/rKThzQdr/gradening.png",
+    techStack: [
+      "React",
+      "Firebase",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "DaisyUI",
+    ],
+    shortDescription:
+      "A dynamic gardening community platform for sharing tips, discovering events, and connecting with fellow gardeners.",
+    description:
+      "GardenSphere brings gardening enthusiasts together to share knowledge regardless of skill level. Built on the MERN stack, it offers gardening events, gardener profiles with tips and expertise, and promotes sustainable gardening through collaborative learning.",
+    challenges:
+      "Implementing a Like button that updates likes in the database was challenging. I researched many resources and successfully integrated this feature.",
+    improvements:
+      "Plan to add real-time chat between gardeners and enhanced mobile interface.",
+    liveLink: "https://gardening-community-5a4c1.web.app/",
+    githubClient: "https://github.com/tushar-hossain/Gardeners_Community",
+  },
 ];
 
 const TechStackBadge = ({ tech }) => (
@@ -98,7 +125,7 @@ const TechStackBadge = ({ tech }) => (
 );
 
 const ProjectCard = ({ project, onViewDetails }) => (
-  <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+  <div className="flex h-full flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
     <div className="relative overflow-hidden">
       <img
         src={project.image}
@@ -109,8 +136,8 @@ const ProjectCard = ({ project, onViewDetails }) => (
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>
 
-    <div className="p-6">
-      <div>
+    <div className="flex flex-1 flex-col p-6">
+      <div className="flex-1">
         <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-3 group-hover:text-blue-400 transition-colors">
           {project.name}
         </h3>
@@ -131,11 +158,10 @@ const ProjectCard = ({ project, onViewDetails }) => (
         </div>
       </div>
 
-      <div>
+      <div className="mt-auto">
         <button
           onClick={() => onViewDetails(project)}
-          className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800
-              hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 hover:gap-3"
+          className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 hover:gap-3 cursor-pointer"
         >
           View Details
           <ArrowRight size={16} />
@@ -168,7 +194,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           <h2 className="text-2xl font-bold text-blue-400">{project.name}</h2>
           <button
             onClick={onClose}
-            className="p-2 bg-blue-500 hover:bg-gray-100  dark:hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-2 bg-blue-500 hover:bg-gray-100  dark:hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           >
             ✕
           </button>

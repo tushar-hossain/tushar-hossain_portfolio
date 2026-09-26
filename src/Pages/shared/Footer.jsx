@@ -37,7 +37,7 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/tushar-hossain-undefined-0361b4371/",
+      href: "https://www.linkedin.com/in/tushar-hossain-dev",
       label: "LinkedIn",
       color: "hover:text-blue-400",
     },
