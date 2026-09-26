@@ -183,7 +183,7 @@ const Skills = () => {
   const skillStats = [
     {
       icon: FaCode,
-      number: "6+",
+      number: "10+",
       label: "Technologies",
       color: "text-blue-400",
     },
